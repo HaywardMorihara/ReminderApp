@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ReminderApp</string>
+
+    <string name="reminder_content">Write your reminder</string>
+    <string name="send_reminder">Send</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint">Write your reminder</string>
+    <string name="send_in_progress">Sending...</string>
+    <string name="save_email">Save</string>
+    <string name="enter_email">Please enter your e-mail</string>
+</resources>
