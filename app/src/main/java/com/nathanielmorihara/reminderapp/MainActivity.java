@@ -11,19 +11,10 @@ import android.widget.EditText;
 
 public class MainActivity extends ActionBarActivity {
 
-    public static String userEmail;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        SharedPreferences preferences = getPreferences(0);
-        userEmail = preferences.getString("userEmail",null);
-
-        if(userEmail == null) {
-            new EmailDialogFragment().show(getFragmentManager(),"Riht");
-        }
     }
 
     @Override
@@ -51,6 +42,6 @@ public class MainActivity extends ActionBarActivity {
     public void sendReminder(View view) {
         EditText reminderContentEditText = (EditText) findViewById(R.id.reminder_content);
         String reminderContent = reminderContentEditText.getText().toString();
-        new EmailSender(this,userEmail).execute(reminderContent);
+        new EmailSender(this).execute(reminderContent);
     }
 }

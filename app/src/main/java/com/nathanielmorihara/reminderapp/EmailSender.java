@@ -17,19 +17,13 @@ public class EmailSender extends AsyncTask<String,Integer,Boolean> {
 
     Context context;
 
-    String userEmail;
+    String userEmail = "nathanielmorihara@gmail.com";
 
     EditText reminderContent;
     Button sendButton;
 
-    public EmailSender(Context context, String userEmail) {
+    public EmailSender(Context context) {
         this.context = context;
-
-        if(userEmail == null) {
-            this.userEmail = "nathanielmorihara@gmail.com";
-        }else {
-            this.userEmail = userEmail;
-        }
 
         reminderContent = (EditText) ((MainActivity) context).findViewById(R.id.reminder_content);
         sendButton = (Button) ((MainActivity) context).findViewById(R.id.send_button);
